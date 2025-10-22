@@ -1,0 +1,650 @@
+
+/* Γενικές ρυθμίσεις */
+* {
+    margin: 0; /* Αφαιρεί όλα τα περιθώρια */
+    padding: 0;/* Αφαιρεί όλα τα padding */
+    box-sizing: border-box; /* Ελέγχει την κατανομή του padding και του περιγράμματος */
+    font-family: Arial, sans-serif;/* Καθορίζει βασική γραμματοσειρά */
+    box-sizing: border-box;
+}
+/* Βασικό Στυλ για το Σώμα της Σελίδας */
+body {
+    line-height: 1.6; /*  απόσταση μεταξύ γραμμών  */
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    background-color: #f4f4f4;/* γκρι φόντο  */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ελάχιστο ύψος για πλήρη οθόνη */
+}
+.grid-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr) 250px;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* ✅ για να κόψει scroll σε edge cases */
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 στήλες ίσου πλάτους */
+    gap: 20px; /* Απόσταση μεταξύ των στηλών */
+    padding: 20px; /* Εσωτερικά περιθώρια */
+}
+
+.grid-container2 section {
+    border: 1px solid #ccc; /* Προαιρετικό για οπτικό διαχωρισμό */
+    padding: 15px;
+    /* background-color: #f9f9f9; Ανοιχτό γκρι φόντο */
+    border-radius: 5px; /* Προαιρετική καμπυλότητα στις γωνίες */
+}
+
+.left-sidebar, .right-sidebar {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+aside
+.main-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Στυλ για το Header */
+/* Header */
+header {
+  background-color: #788ea4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+/* Εικόνα + Τίτλος μαζί */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Απόσταση εικόνας - τίτλου */
+}
+
+.logo-title img {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+.logo-title h1 {
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #a3b3c3;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Άλλα στοιχεία τίτλων */
+h3, h4 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+/* Στυλ για το Navigation μενου */
+nav {
+    margin-top: 20px;
+    padding: 10px;
+
+    background-color: #4a637d;
+    position: fixed;   /* Σταθερό πάνω */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;    /* Πάνω από όλα τα άλλα */
+}
+
+nav h2, nav h3, nav h4 {
+    color: #34495e;
+    margin-top: 15px;
+}
+
+nav p {
+    margin: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+header nav ul li {
+    margin-left: 20px; /* Απόσταση μεταξύ των στοιχείων του μενού */
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+   
+}
+main.grid-layout {
+    display: grid; /* Χρησιμοποιούμε CSS Grid για τη διάταξη */
+    grid-template-columns: 1fr 3fr 1fr; /* 3 στήλες, η κεντρική είναι μεγαλύτερη */
+    gap: 20px; /* Απόσταση μεταξύ των στηλών */
+    padding: 20px;
+    width: 100%;  /* Διασφαλίζει ότι το container θα καταλαμβάνει όλο το διαθέσιμο πλάτος */
+    box-sizing: border-box;
+}
+
+nav ul li {
+    display: inline;/* Τα αντικείμενα εμφανίζονται σε σειρά */
+    margin-right: 20px; /* Απόσταση μεταξύ των συνδέσμων */
+    margin: 0 20px;
+}
+main {
+    padding: 20px;
+    display: flex; /* Ενεργοποίηση Flexbox */
+    flex-direction: column; /* Τα sections διατάσσονται κάθετα */
+    gap: 20px; /* Απόσταση μεταξύ των sections */
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;/* Αφαίρεση υπογράμμισης */
+    font-weight: bold;/* Έντονη γραμματοσειρά */
+    font-size: 1.2em;
+}
+.left-column, .center-column, .right-column {
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Εφέ hover για τους συνδέσμους */
+nav ul li a:hover {
+    background-color:  #788ea4; /*  φόντο όταν ο χρήστης περνάει το ποντίκι */
+    color: black;
+}
+
+/* Στυλ για τις εικόνες */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.details {
+    display: block; /* Κρύβει τις λεπτομέρειες αρχικά */
+    transition: opacity 0.3s ease-in-out; /* Εφέ ομαλής μετάβασης */
+}
+
+.details-container:hover .details {
+    display: block; /* Εμφανίζει τις λεπτομέρειες όταν ο χρήστης περνάει το ποντίκι πάνω στο container */
+    visibility: visible; /* Γίνεται ορατό */
+    opacity: 1; /* Διαφάνεια 1 για πλήρη εμφάνιση */
+}
+
+.details-container {
+    position: relative; /* Επιτρέπει έλεγχο της τοποθέτησης */
+    margin: 10px 0; /* Προσθέτει διάστημα πάνω-κάτω */
+    cursor: pointer; /* Αλλαγή δείκτη ποντικιού */
+}
+
+.details-header {
+    background-color: #f1f1f1; /* Χρώμα φόντου για τον τίτλο */
+    padding: 10px;
+    border: 1px solid #ddd; /* Διαχωρισμός από το περιβάλλον */
+    font-size: 18px; /* Αύξηση μεγέθους γραμματοσειράς */
+}
+
+.details {
+    background-color: #fafafa; /* Χρώμα φόντου για τις λεπτομέρειες */
+    border: 1px solid #ddd; /* Προσθήκη πλαισίου */
+    padding: 10px; /* Εσωτερικό διάστημα */
+    font-size: 16px; /* Μέγεθος γραμματοσειράς */
+    line-height: 1.5; /* Βελτιώνει την αναγνωσιμότητα */
+}
+
+
+/* Λίστα ιδιοτήτων */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+ul li {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+ul li + p {
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+/* Στυλ για τις Ενότητες */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex; /* Τα περιεχόμενα κάθε section διατάσσονται οριζόντια */
+    gap: 20px; /* Απόσταση μεταξύ εικόνας και κειμένου */
+    align-items: flex-start; /* Ευθυγράμμιση στην κορυφή */
+}
+
+.smaller{
+    font-size: 0.9em; /* Μικρότερο μέγεθος γραμματοσειράς */
+    color: #004d99; /* Χρώμα συνδέσμου */
+    text-decoration: none; /* Αφαίρεση υπογράμμισης */
+}
+
+section img {
+    flex-shrink: 0; /* Αποφυγή συρρίκνωσης της εικόνας */
+}
+
+
+section h2 {
+    font-size: 1.5em;
+    color: #004d99;
+    margin-bottom: 20px;
+}
+section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+  .content-block {
+    margin-bottom: 30px; /* Απόσταση μεταξύ των μπλοκ */
+    width: 80%; /* Προσαρμόσιμο πλάτος */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Απόσταση από το κείμενο */
+    text-align: center;
+}
+section h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Στυλ για τα Άρθρα  */
+article {
+    margin-bottom: 20px;/* Απόσταση από άλλα στοιχεία */
+    padding: 15px;/* Εσωτερικό διάστημα */
+    background-color: #f9f9f9;
+    border-radius: 8px;/* Στρογγυλεμένες γωνίες */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+}
+
+article p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+article a {
+    color: #004d99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #ffcc00;
+}
+
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 20px auto; /* Κεντράρει το iframe και προσθέτει περιθώριο */
+}
+
+/* Στυλ για τον Πίνακα Περιεχομένων */
+table {
+  width: 100%;
+  table-layout: fixed; /* Σταθερή διάταξη στηλών */
+  word-wrap: break-word; /* Σπάει μεγάλες λέξεις */
+}
+
+
+table th, table td {
+    padding: 10px;/* Εσωτερικό διάστημα */
+    text-align: left; /* Κείμενο ευθυγραμμισμένο αριστερά */
+    border: 1px solid #ddd;/* Λεπτό περίγραμμα */
+  }
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table a {
+    text-decoration: none;
+    color: #004d99;
+}
+
+table a:hover {
+    color: #ffcc00;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* Ορίζει την εικόνα ως block-level στοιχείο */
+    margin: 0 auto; /* Κεντράρει την εικόνα οριζόντια */
+    }
+  
+  
+  /* Συνδέσμοι */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Στυλ για τη δεξιά sidebar */
+.right-sidebar {
+    
+    background-color: #788ea4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Τίτλος της sidebar */
+.right-sidebar h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Container για το contact widget */
+.contact-widget {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Τίτλος του widget */
+.contact-widget h1 {
+    font-size: 1.2rem;
+    color:  #6f8fb1;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Στυλ για τα labels */
+.contact-widget label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Στυλ για τα πεδία εισαγωγής */
+.contact-widget input,
+.contact-widget textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid  #6f8fb1;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Εφέ focus στα πεδία */
+.contact-widget input:focus,
+.contact-widget textarea:focus {
+    border-color: #7489a0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Στυλ για το κουμπί */
+.contact-widget button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6f8fb1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Εφέ hover στο κουμπί */
+.contact-widget button:hover {
+    background-color: #0056b3;
+}
+
+/* Διαφήμιση Sidebar */
+.left-sidebar {
+    background-color: #788ea4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+main.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Τρεις στήλες: Αριστερή, Κεντρική, Δεξιά */
+    gap: 20px; /* Κενό μεταξύ των στοιχείων */
+    padding: 20px;
+}
+.left-column, .center-column, .right-column {
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.center-column {
+    background-color: #f4f4f4;
+}
+
+.left-sidebar h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ad-container img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.ad-container p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.ad-container .ad-button {
+    display: inline-block;
+    background-color: rgb(45, 34, 159);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ad-container .ad-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Στυλ για το Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #678eb5;
+    color: white;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer div a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer div a:hover {
+    color: #3498db;
+}
+
+/*About us*/
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.team-member:last-child {
+    border-bottom: none;
+}
+
+.team-member img {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px; /* Απόσταση από το κείμενο */
+    flex-shrink: 0; /*Η εικόνα δεν θα μικρύνει */
+}
+.team-member div {
+    flex: 1; /* Το κείμενο καταλαμβάνει τον υπόλοιπο χώρο */
+    text-align: left; /* Στοίχιση του κειμένου στα αριστερά */
+}
+
+
+/*aside*/
+
+.category {
+    margin-bottom: 40px; /* Απόσταση από την επόμενη κατηγορία */
+}
+
+.category h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: flex; 
+    align-items: center; /* Κεντράρισμα περιεχομένων */
+    justify-content: space-between; /* Απόσταση εικόνας-κειμένου */
+    background-color: #f4f4f4; /* Φόντο */
+    padding: 20px;
+    border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Σκιά */
+}

@@ -1,0 +1,311 @@
+
+/* Γενικές ρυθμίσεις */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Βασικό Στυλ για το Σώμα της Σελίδας */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Στυλ για το Header */
+header {
+    background-color: #788ea4;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+h3, h4 {
+    color: #000000;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 1.5em;
+}
+header h2 {
+    margin: 0;
+    color: #000000;
+    font-size: 1.5em;
+   
+}
+header img {
+    margin-bottom: 10px;
+}
+
+/* Στυλ για το Navigation */
+nav {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+nav h2, nav h3, nav h4 {
+    color: #34495e;
+    margin-top: 15px;
+}
+
+nav p {
+    margin: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+main {
+    padding: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Στυλ για τις εικόνες */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+iframe {
+    display: block;
+    margin: 20px auto; /* Κεντράρει το iframe και προσθέτει περιθώριο */
+}
+.details {
+    display: none; /* Κρύβει τις λεπτομέρειες αρχικά */
+    visibility: hidden; /* Αρχικά αόρατο */
+    opacity: 0; /* Διαφάνεια 0 για απόκρυψη */
+    transition: opacity 0.3s ease-in-out; /* Εφέ ομαλής μετάβασης */
+}
+
+.details-container:hover .details {
+    display: block; /* Εμφανίζει τις λεπτομέρειες όταν ο χρήστης περνάει το ποντίκι πάνω στο container */
+    visibility: visible; /* Γίνεται ορατό */
+    opacity: 1; /* Διαφάνεια 1 για πλήρη εμφάνιση */
+}
+
+.details-container {
+    position: relative; /* Επιτρέπει έλεγχο της τοποθέτησης */
+    margin: 10px 0; /* Προσθέτει διάστημα πάνω-κάτω */
+    cursor: pointer; /* Αλλαγή δείκτη ποντικιού */
+}
+
+.details-header {
+    background-color: #f1f1f1; /* Χρώμα φόντου για τον τίτλο */
+    padding: 10px;
+    border: 1px solid #ddd; /* Διαχωρισμός από το περιβάλλον */
+    font-size: 18px; /* Αύξηση μεγέθους γραμματοσειράς */
+}
+
+.details {
+    background-color: #fafafa; /* Χρώμα φόντου για τις λεπτομέρειες */
+    border: 1px solid #ddd; /* Προσθήκη πλαισίου */
+    padding: 10px; /* Εσωτερικό διάστημα */
+    font-size: 16px; /* Μέγεθος γραμματοσειράς */
+    line-height: 1.5; /* Βελτιώνει την αναγνωσιμότητα */
+}
+
+
+/* Λίστα ιδιοτήτων */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: left;
+}
+
+ul li {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+ul li + p {
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+/* Στυλ για τις Ενότητες */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+section h2 {
+    font-size: 2em;
+    color: #004d99;
+    margin-bottom: 20px;
+}
+section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+section h4 {
+    font-size: 1.8em;
+    color: #004d99;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+  }
+
+
+/* Στυλ για τα Άρθρα (Βιβλία και Διαλέξεις) */
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+}
+
+article p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+article a {
+    color: #004d99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #ffcc00;
+}
+
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Στυλ για τον Πίνακα Περιεχομένων */
+table {
+    width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table a {
+    text-decoration: none;
+    color: #004d99;
+}
+
+table a:hover {
+    color: #ffcc00;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* Ορίζει την εικόνα ως block-level στοιχείο */
+    margin: 0 auto; /* Κεντράρει την εικόνα οριζόντια */
+    }
+  
+  
+  /* Συνδέσμοι */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+
+/* Στυλ για το Footer */
+footer {
+    text-align: center;
+    background-color: #678eb5;
+    color: white;
+    padding: 1px 1px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 5px 0;
+   
+}
+
+footer div a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    
+}
+
+footer div a:hover {
+    color: #3498db;
+}

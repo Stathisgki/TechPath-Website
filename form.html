@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Φόρμα Εγγραφής</title>
+    <link rel="stylesheet" href="style_form.css">
+</head>
+<body>
+    <header>
+        <img src="photos/202161142.png" height="200" width="300" alt="logo">
+        <h1>Φόρμα Εγγραφής</h1>
+        <nav>
+        <ul>
+            <li><a href="index.html">Αρχική</a></li>
+            <li><a href="categories.html">Θεματικές Ενότητες</a></li>
+            <li><a href="aboutus.html">Ποιοι Είμαστε</a></li>
+        </ul>
+    </header>
+    </nav>
+    <form id="registrationForm" action="/submit" method="POST">
+        <fieldset>
+            <legend>Προσωπικά Στοιχεία</legend>
+            
+            <label for="name">Ονοματεπώνυμο:</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="π.χ Γιώργος Παπαδόπουλος">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="π.χ Techpath@mail.com">
+            
+            <label for="address">Διεύθυνση Κατοικίας:</label>
+            <input type="text" id="address" name="address" placeholder="π.χ Κυκλάδων 15">
+            
+            <label for="date">Ημερομηνία Γέννησης:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="phone">Τηλέφωνο:</label>
+            <!-- <input type="tel" id="phone" name="phone" required pattern="\d{10}" placeholder="π.χ 6942..."> -->
+            <input type="tel" id="phone" name="phone" required placeholder="6942@@@@@@">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Στοιχεία Ταυτοποίησης</legend>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Κωδικός:</label>
+            <input type="password" id="password" name="password" required minlength="8">
+            
+            <label for="confirmPassword">Επιβεβαίωση Κωδικού:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Επιλογές Επικοινωνίας</legend>
+            
+            <label>Προτιμώμενη Μέθοδος:</label>
+            <div>
+                <input type="checkbox" id="sms" name="communication" value="SMS">
+                <label for="sms">SMS</label>
+                
+                <input type="checkbox" id="emailComm" name="communication" value="Email">
+                <label for="emailComm">Email</label>
+                
+                <input type="checkbox" id="viber" name="communication" value="Viber">
+                <label for="viber">Viber</label>
+                
+                <input type="checkbox" id="whatsapp" name="communication" value="WhatsApp">
+                <label for="whatsapp">WhatsApp</label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Ερωτηματολόγιο</legend>
+            
+            <label for="education">Επίπεδο Μόρφωσης:</label>
+            <select id="education" name="education" required>
+                <option value="">Επιλέξτε</option>
+                <option value="highschool">Απολυτήριο Λυκείου</option>
+                <option value="bachelor">Πτυχίο Πανεπιστημίου</option>
+                <option value="master">Μεταπτυχιακό</option>
+                <option value="phd">Διδακτορικό</option>
+            </select>
+            
+            <label for="profession">Επάγγελμα:</label>
+            <input type="text" id="profession" name="profession" required>
+            
+            <label for="skills">Δεξιότητες:</label>
+            <textarea id="skills" name="skills" rows="2" placeholder="Γράψτε τις δεξιότητες σας"></textarea>
+
+            <label for="knowledge">Είχατε προηγούμενη επαφή με πληροφορική;</label>
+            
+                <input type="radio" id="yes" name="knowledge" value="yes">
+                <label for="yes">Ναι</label>
+
+                <input type="radio" id="no" name="knowledge" value="no">
+                <label for="no">Όχι</label>
+           
+        </fieldset>
+        
+        <button type="submit">Εγγραφή</button>
+    </form>
+    <script src="javascript.js"></script>
+</body>
+<footer>
+    <p>&copy; 2024 Εκπαιδευτικός Ιστότοπος</p>
+    <p>Στοιχεία Επικοινωνίας: TechPath@gmail.com</p>
+    <div>
+        <a href="https://facebook.com">Facebook</a> |
+        <a href="https://twitter.com">X</a>
+    </div>
+</footer>
+</html>

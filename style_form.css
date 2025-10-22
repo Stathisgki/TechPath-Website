@@ -1,0 +1,159 @@
+/* Ensure body takes full height */
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #34495e;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Εφέ hover για τους συνδέσμους */
+nav ul li a:hover {
+    background-color:  #788ea4; /*  φόντο όταν ο χρήστης περνάει το ποντίκι */
+    color: black;
+}
+
+/* Ensure responsive design for smaller screens */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Στυλ για το Footer */
+footer {
+    text-align: center;
+    background-color: #678eb5;
+    color: white;
+    padding: 1px 1px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 5px 0;
+   
+}
+
+footer div a {
+    color: #ecf0f1;
+    margin: 0 10px;
+    
+}
+
+footer div a:hover {
+    color: #3498db;
+}
+
+/* Στυλ για το Header */
+header {
+    background-color: #788ea4;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, header h2, h3, h4 {
+    color: #000000;
+}
+
+/* Στυλ για το Navigation μενου */
+nav {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+nav h2, nav h3, nav h4 {
+    color: #34495e;
+    margin-top: 15px;
+}
+
+nav p {
+    margin: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;/* Τα αντικείμενα εμφανίζονται σε σειρά */
+    margin-right: 20px; /* Απόσταση μεταξύ των συνδέσμων */
+}
+main {
+    padding: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;/* Αφαίρεση υπογράμμισης */
+    font-weight: bold;/* Έντονη γραμματοσειρά */
+}
